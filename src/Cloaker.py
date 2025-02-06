@@ -60,6 +60,7 @@ class Scanner:
 def main():
     parser = argparse.ArgumentParser(prog="Cloaker", usage="Cloaker [OPTIONS]")
     parser.add_argument("-t", "--time", help="Specify possible logged time.", required=True, type=str)
+    parser.add_argument("-sS", "--scan-server", help="Scan servers to seek log files.", action="store_true")
     parser.add_argument("-sP", "--scan-process", help="Scan possible logging processes to identify log files.", action="store_true")
     parser.add_argument("-sF", "--scan-file", help="Scan possible log files that may contains logs.", action="store_true")
     parser.add_argument("-e", "--exclude-show", help="Show excluded results.", action="store_true")
